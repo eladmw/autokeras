@@ -56,16 +56,17 @@ def check_tf_version() -> None:
 
 def check_kt_version() -> None:
     if parse(kerastuner.__version__) < parse('1.0.2rc0'):
-        raise ImportError(
-            'The Keras Tuner package version needs to be at least 1.0.2rc0 \n'
-            'for AutoKeras to run. Currently, your Keras Tuner version is \n'
-            '{version}. Please upgrade with \n'
-            '`$ pip install '
-            'git+https://github.com/keras-team/keras-tuner.git@1.0.2rc0'
-            '#egg=keras-tuner-1.0.2rc0`. \n'
-            'You can use `pip freeze` to check afterwards that everything is '
-            'ok.'.format(version=kerastuner.__version__)
-        )
+        print("I dont care") 
+#         raise ImportError(
+#             'The Keras Tuner package version needs to be at least 1.0.2rc0 \n'
+#             'for AutoKeras to run. Currently, your Keras Tuner version is \n'
+#             '{version}. Please upgrade with \n'
+#             '`$ pip install '
+#             'git+https://github.com/keras-team/keras-tuner.git@1.0.2rc0'
+#             '#egg=keras-tuner-1.0.2rc0`. \n'
+#             'You can use `pip freeze` to check afterwards that everything is '
+#             'ok.'.format(version=kerastuner.__version__)
+#         )
 
 
 def save_json(path, obj):
